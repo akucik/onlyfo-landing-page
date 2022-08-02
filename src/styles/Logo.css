@@ -1,0 +1,25 @@
+.logo-container {
+  padding-top: 2.5rem;
+  grid-area: logo;
+  animation: logo-spin infinite 3s linear;
+}
+.slow {
+  animation-play-state: paused;
+}
+.fast {
+  animation-play-state: running;
+}
+/* vmin: what is minimum between height of viewport and width&make 40%of it=responsive/good with vectorGraphics*/
+.logo {
+  height: 40vmin;
+  animation: logo-spin infinite 15s linear;
+}
+/* keyframe=sets points from 1 to 2&we set some animation: */
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} ;

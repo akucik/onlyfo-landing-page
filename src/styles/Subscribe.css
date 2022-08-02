@@ -1,0 +1,67 @@
+.subscribe {
+  grid-area: subscribe;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: [input] 4fr [button] 1fr;
+  align-items: center;
+}
+.subscribe-email {
+  grid-area: input;
+  border-radius: 4px;
+  height: 40px;
+  background: transparent;
+  border: 1px solid var(--offWhite);
+  border-radius: 20px;
+  color: var(--white);
+  padding-left: 10px;
+  outline: none;
+  font-size: 16px;
+  transition: all 0.2s ease-in;
+}
+
+.subscribe-email::placeholder {
+  color: rgb(105, 105, 105);
+  font-size: 16px;
+  /* text-align: left; */
+}
+.subscribe-email:focus,
+.subscribe-email:hover {
+  border-color: var(--lightNeon);
+}
+.subscribe-btn,
+.subscribe-btn-ok {
+  grid-area: button;
+  height: 40px;
+  background-color: transparent;
+  color: var(--neon);
+  border: 1px solid var(--neon);
+  border-radius: 20px;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+
+.subscribe-btn:hover {
+  filter: brightness(85%);
+  transform: translateY(5%);
+}
+
+.subscribe-btn:focus {
+  outline: none;
+}
+
+@media (max-width: 700px) {
+  .subscribe {
+    grid-template-areas: "input" "button";
+  }
+  .subscribe-email,
+  .subscribe-btn {
+    width: 250px;
+    grid-column: 1 / -1;
+  }
+  .subscribe-email::placeholder {
+    text-align: center;
+  }
+}

@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@200;500;600;700&family=Bodoni+Moda:opsz,wght@6..96,400;6..96,700&family=Inter:wght@100;200;300;500;600&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --neon: #c8d505;
+  --lightNeon: #f6ff71;
+  --darkGrey: #292f36;
+  --white: #fffffa;
+  --offWhite: #b6b6b6;
+  --black: #000013;
+  --orange: #fa8334;
+  --red: #ff312e;
+  --transparent: rgba(255, 255, 255, 0);
+}
+
+html {
+  box-sizing: border-box;
+  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif; */
+  font-family: "Inter", sans-serif;
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-image: url(../img/texture.svg);
+  /* background-repeat: no-repeat;
+  background-image: url(../img/nft.svg);
+  background-position: center right; */
+  background-color: var(--darkGrey);
+  min-height: calc(100vh - 100px);
+  margin: 10px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+code {
+  font-family: "Inter", sans-serif;
+  /* font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace; */
+}

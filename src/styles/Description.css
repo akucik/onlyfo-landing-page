@@ -1,0 +1,16 @@
+.description {
+  /* grid-area: description; */
+  display: grid;
+  font-size: 16px;
+  font-weight: 500;
+  max-width: 550px;
+  grid-template-columns: 1fr;
+}
+.description-text {
+  color: var(--offWhite);
+  font-size: 1.3125rem;
+  font-weight: 300;
+  line-height: 1.3;
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+}

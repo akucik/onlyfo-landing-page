@@ -62,19 +62,9 @@ const Subscribe = ({ placeholder, changeLogoSpeed }) => {
         required
       />
 
-      {!isSubmitted ? (
-        <button
-          type="submit"
-          className="subscribe-btn"
-          onClick={() => setIsSubmitted(!isSubmitted)}
-        >
-          Notify Me!
-        </button>
-      ) : (
-        <button type="button" className="subscribe-btn">
-          You're In!
-        </button>
-      )}
+      <button type="submit" className="subscribe-btn">
+        Notify Me!
+      </button>
     </form>
   );
 };

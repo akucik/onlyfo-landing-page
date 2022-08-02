@@ -10,7 +10,9 @@ const Subscribe = ({ placeholder, changeLogoSpeed }) => {
     email: "",
   });
   const form = useRef();
+
   const [emailIsValid, setEmailIsValid] = useState(true);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleChange = (e) => {
     setState({ email: e.target.value.trim() });
@@ -60,9 +62,19 @@ const Subscribe = ({ placeholder, changeLogoSpeed }) => {
         required
       />
 
-      <button type="submit" className="subscribe-btn">
-        Notify Me!
-      </button>
+      {!isSubmitted ? (
+        <button
+          type="submit"
+          className="subscribe-btn"
+          onClick={() => setIsSubmitted(!isSubmitted)}
+        >
+          Notify Me!
+        </button>
+      ) : (
+        <button type="button" className="subscribe-btn">
+          You're In!
+        </button>
+      )}
     </form>
   );
 };

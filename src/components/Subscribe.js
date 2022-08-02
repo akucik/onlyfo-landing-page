@@ -10,19 +10,18 @@ const Subscribe = ({ placeholder, changeLogoSpeed }) => {
     email: "",
   });
   const form = useRef();
-
-  const [emailIsValid, setEmailIsValid] = useState(true);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [emailIsValid, setEmailIsValid] = useState(false);
+  const [isToggled, setIsToggled] = useState(false);
 
   const handleChange = (e) => {
     setState({ email: e.target.value.trim() });
   };
 
-  const sendEmail = (e) => {
+  const submitEmail = (e) => {
     e.preventDefault();
 
     if (state.email === "") {
-      setEmailIsValid(false);
+      // setEmailIsValid(false);
       return;
     }
     setEmailIsValid(true);
@@ -51,19 +50,24 @@ const Subscribe = ({ placeholder, changeLogoSpeed }) => {
   //YOUR_PUBLIC_KEY(USER_ID): TkS4Y_8M3sr8G4DMs
 
   return (
-    <form ref={form} onSubmit={sendEmail} className="subscribe">
+    <form ref={form} onSubmit={submitEmail} className="subscribe">
       <input
         className="subscribe-email"
         name="email"
-        type="text"
+        type="email"
         placeholder={placeholder}
         onChange={handleChange}
         value={state.email}
         required
       />
 
-      <button type="submit" className="subscribe-btn">
-        Notify Me!
+      <button
+        type="submit"
+        className="subscribe-btn"
+        onClick={() => setIsToggled(!isToggled)}
+      >
+        {" "}
+        {isToggled ? "You're In!" : "Notify Me!"}
       </button>
     </form>
   );

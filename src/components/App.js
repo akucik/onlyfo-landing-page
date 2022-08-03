@@ -23,7 +23,7 @@ const App = () => {
     description: {
       // text: "OnlyfO is NFT Marker Place for photographers.",
       text:
-        "Start your own venture! Turn your photos into NFT and sell it on OnlyfO.",
+        "Start your own venture! Turn your photos into NFTs and sell it on OnlyfO.",
     },
     subscribe: {
       placeholder: "Enter your email",
